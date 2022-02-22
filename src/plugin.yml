@@ -1,0 +1,7 @@
+name: DeluxeWithdrawPlayerPointsAddon
+main: dev.norska.dwaddon.pp.PPAddon
+version: Build 1
+author: Norska
+website: "https://norska.dev"
+api-version: 1.13
+depend: [DeluxeWithdraw, PlayerPoints]
