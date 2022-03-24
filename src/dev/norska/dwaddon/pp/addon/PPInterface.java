@@ -100,4 +100,9 @@ public class PPInterface implements DWAddonInterface {
 		PPAddon.getInstance().cache();
 	}
 
+	@Override
+	public Boolean useInt() {
+		return true;
+	}
+
 }
