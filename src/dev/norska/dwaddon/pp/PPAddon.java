@@ -2,10 +2,9 @@ package dev.norska.dwaddon.pp;
 
 import java.io.IOException;
 
+import dev.norska.niridiumcolorapi.IridiumColorAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
-
-import com.iridium.iridiumcolorapi.IridiumColorAPI;
 
 import dev.norska.dw.DeluxeWithdraw;
 import dev.norska.dwaddon.pp.addon.PPInterface;
@@ -23,8 +22,8 @@ public class PPAddon extends JavaPlugin {
 	public String prefix;
 	
 	public void onEnable() {
-		
-		prefix = Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") ? 
+
+		prefix = Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19") || Bukkit.getVersion().contains("1.20") || Bukkit.getVersion().contains("1.21") ?
 				IridiumColorAPI.process("§8[<GRADIENT:FFE818>&lDW Addon (PlayerPoints)</GRADIENT:B7FF1D>§8]§r") :
 				IridiumColorAPI.process("&8[&e&lDW Addon (PlayerPoints)&8]&r");
 		

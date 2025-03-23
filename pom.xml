@@ -1,10 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.norska.dwaddon.pp</groupId>
-  <artifactId>DeluxeWithdrawPlayerPointsAddon</artifactId>
-  <version>1a</version>
+  <artifactId>DWA-PlayerPoints</artifactId>
+  <version>2025.03</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
+      <resources>
+          <resource>
+              <directory>src</directory>
+              <excludes>
+                  <exclude>**/*.java</exclude>
+              </excludes>
+          </resource>
+      </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -25,32 +33,23 @@
         	<id>spigot-repo</id>
         	<url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     	</repository>
-      <repository>
-      		<id>iridiumdevelopment</id>
-      		<url>https://nexus.iridiumdevelopment.net/repository/maven-releases/</url>
-  		</repository>
-      <repository>
-          <id>rosewood-repo</id>
-          <url>https://repo.rosewooddev.io/repository/public/</url>
-      </repository>
+        <repository>
+            <id>rosewood-repo</id>
+            <url>https://repo.rosewooddev.io/repository/public/</url>
+        </repository>
 	</repositories>
 	<dependencies>
     <dependency>
         <groupId>org.spigotmc</groupId>
         <artifactId>spigot-api</artifactId>
-        <version>1.18.2-R0.1-SNAPSHOT</version>
+        <version>1.21.4-R0.1-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.22</version>
+      <version>1.18.30</version>
       <scope>provided</scope>
-  </dependency>
-  <dependency>
-      <groupId>com.iridium</groupId>
-      <artifactId>IridiumColorAPI</artifactId>
-      <version>LATEST</version>
   </dependency>
   <dependency>
     <groupId>com.github.N0RSKA</groupId>
@@ -63,6 +62,11 @@
       <artifactId>playerpoints</artifactId>
       <version>3.1.1</version>
       <scope>provided</scope>
+  </dependency>
+  <dependency>
+      <groupId>com.github.N0RSKA</groupId>
+      <artifactId>NiridiumColorAPI</artifactId>
+      <version>1</version>
   </dependency>
   </dependencies>
 </project>

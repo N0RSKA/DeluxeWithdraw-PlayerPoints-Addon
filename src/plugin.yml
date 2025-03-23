@@ -1,6 +1,6 @@
-name: DeluxeWithdrawPlayerPointsAddon
+name: DWA-PlayerPoints
 main: dev.norska.dwaddon.pp.PPAddon
-version: Build 1a
+version: 2025.03
 author: Norska
 website: "https://norska.dev"
 api-version: 1.13
