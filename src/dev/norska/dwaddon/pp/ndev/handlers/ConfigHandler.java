@@ -11,20 +11,36 @@ public class ConfigHandler {
 	
 	@Getter private CommentedConfiguration configFile;
 	
-	private File path = null;
-	
+//	private File path = null;
+//
+//	public void generateFiles(PPAddon main) throws IOException {
+//
+//		if(path == null) path = new File("plugins/DeluxeWithdraw/addons");
+//		if(!path.exists()) path.mkdirs();
+//
+//		File file = new File(path, "config.yml");
+//
+//        if(!file.exists()) file.createNewFile();
+//
+//        configFile = CommentedConfiguration.loadConfiguration(file);
+//        try {
+//			configFile.syncWithConfig(file, main.getResource("config.yml"), "no");
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//
+//	}
+
 	public void generateFiles(PPAddon main) throws IOException {
-		
-		if(path == null) path = new File("plugins/DeluxeWithdraw/addons");
-		if(!path.exists()) path.mkdirs();
-		
-		File file = new File(path, "addon-playerpoints.yml");
 
-        if(!file.exists()) file.createNewFile();
+		File file = new File(main.getDataFolder(), "config.yml");
 
-        configFile = CommentedConfiguration.loadConfiguration(file);
-        try {
-			configFile.syncWithConfig(file, main.getResource("addon-playerpoints.yml"), "no");
+		if(!file.exists()) main.saveResource("config.yml", false);
+
+		configFile = CommentedConfiguration.loadConfiguration(file);
+		try {
+			configFile.syncWithConfig(file, main.getResource("config.yml"), "no");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

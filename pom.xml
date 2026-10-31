@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>dev.norska.dwaddon.pp</groupId>
   <artifactId>DWA-PlayerPoints</artifactId>
-  <version>2025.03</version>
+  <version>2026.10</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
       <resources>
@@ -42,7 +42,7 @@
     <dependency>
         <groupId>org.spigotmc</groupId>
         <artifactId>spigot-api</artifactId>
-        <version>1.21.4-R0.1-SNAPSHOT</version>
+        <version>26.3-R0.1-SNAPSHOT</version>
         <scope>provided</scope>
     </dependency>
     <dependency>
@@ -62,11 +62,6 @@
       <artifactId>playerpoints</artifactId>
       <version>3.1.1</version>
       <scope>provided</scope>
-  </dependency>
-  <dependency>
-      <groupId>com.github.N0RSKA</groupId>
-      <artifactId>NiridiumColorAPI</artifactId>
-      <version>1</version>
   </dependency>
   </dependencies>
 </project>

@@ -2,7 +2,6 @@ package dev.norska.dwaddon.pp;
 
 import java.io.IOException;
 
-import dev.norska.niridiumcolorapi.IridiumColorAPI;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,9 +22,9 @@ public class PPAddon extends JavaPlugin {
 	
 	public void onEnable() {
 
-		prefix = Bukkit.getVersion().contains("1.16") || Bukkit.getVersion().contains("1.17") || Bukkit.getVersion().contains("1.18") || Bukkit.getVersion().contains("1.19") || Bukkit.getVersion().contains("1.20") || Bukkit.getVersion().contains("1.21") ?
-				IridiumColorAPI.process("§8[<GRADIENT:FFE818>&lDW Addon (PlayerPoints)</GRADIENT:B7FF1D>§8]§r") :
-				IridiumColorAPI.process("&8[&e&lDW Addon (PlayerPoints)&8]&r");
+		prefix = isAbove1_16() ?
+				"§8[§eDW Addon (PlayerPoints)§8]§r" :
+				"§8[§eDW Addon (PlayerPoints)§8]§r";
 		
 		Bukkit.getConsoleSender().sendMessage(" ");
     	Bukkit.getConsoleSender().sendMessage(prefix + " §7" + getDescription().getVersion() + "§f, a §afree §faddon by §7Norska §f- §7Thanks for using!");
@@ -61,6 +60,18 @@ public class PPAddon extends JavaPlugin {
 	
 	public void cache() {
 		getNHandler().getCacheHandler().cache(this);
+	}
+
+	public Boolean isAbove1_16(){
+		return Bukkit.getVersion().contains("1.16") ||
+				Bukkit.getVersion().contains("1.17") ||
+				Bukkit.getVersion().contains("1.18") ||
+				Bukkit.getVersion().contains("1.19") ||
+				Bukkit.getVersion().contains("1.20") ||
+				Bukkit.getVersion().contains("1.21") ||
+				Bukkit.getVersion().contains("26.1") ||
+				Bukkit.getVersion().contains("26.2") ||
+				Bukkit.getVersion().contains("26.3");
 	}
 	
 }

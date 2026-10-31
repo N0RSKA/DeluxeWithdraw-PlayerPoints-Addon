@@ -1,7 +1,8 @@
 name: DWA-PlayerPoints
 main: dev.norska.dwaddon.pp.PPAddon
-version: 2025.03
+version: 2026.10
 author: Norska
 website: "https://norska.dev"
 api-version: 1.13
 depend: [DeluxeWithdraw, PlayerPoints]
+folia-supported: true
